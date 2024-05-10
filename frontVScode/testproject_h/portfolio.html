@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+    <html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="portfolio" />
+    <div class="container-center-horizontal">
+      <div class="portfolio screen">
+        <div class="navigation">
+          <p class="g valign-text-middle body-text">챗G...보다 내 관심사를 더 잘 알아주는 뉴스 정보 사이트</p>
+          <div class="items">
+            <div class="items-item valign-text-middle body-text"><a href="#">Board</a></div>
+            <div class="items-item valign-text-middle body-text"><a href="#">QnA</a></div>
+            <div class="items-item valign-text-middle body-text"><a href="#">Join Us</a></div>
+            <div class="button"><div class="log-in valign-text-middle small-text"><a href="#">LogIn</a></div></div>
+          </div>
+        </div>
+        <div class="copy">
+          <h1 class="text-1-1 title">인기있는 뉴스는?</h1>
+          <p class="text-2-2 valign-text-middle subheading">두둥 두둥<br />검색할 기간과 카테고리를 알려주세요</p>
+        </div>
+        <div class="copy"> </div>
+        <div class="flex-row small-text">
+          <form style="display: flex; flex-wrap: wrap; align-items: end; gap: 10px; width: 1095px;">
+              <div class="view-2">
+                  <div class="text">시작일</div>
+                  <input type="date" style="height:45px; width:220px" class="form-control" id="datePicker">
+              </div>
+              <div class="view-1 view-2">
+                  <div class="text">종료일</div>
+                  <input type="date" style="height:45px; width:220px" class="form-control" id="datePicker2">
+              </div>
+              <div class="category small-text">
+                  <div class="text">카테고리 선택</div>
+                  <select class="form-control" style="height:45px; width:220px" id="exampleSelect">
+                      <option value="kbo">국내야구</option>
+                      <option value="wbo">해외야구</option>
+                      <option value="IT">IT/과학</option>
+                      <option>세계</option>
+                      <option>경제</option>
+                      <option>정치</option>
+                  </select>
+              </div>
+              <input class="btn btn-black my-2 my-sm-0" value="전송" type="button" id="sendjango" style="margin-left: 200px; height:45px; width:150px; background-color: black; color: white;">
+                <input type="button" class="btn btn-black my-2 my-sm-0" id="bar-chart-button" value="막대 그래프" style="margin-left: 200px; height:45px; width:150px; background-color: black; color: white;">
+                <input type="button" class="btn btn-black my-2 my-sm-0" id="line-chart-button" value="선 그래프" style="margin-left: 200px; height:45px; width:150px; background-color: black; color: white;">
+                <!-- 원하는 다른 차트 유형 버튼 추가 -->              
+            </form>
+      </div>
+        <div class="flex-col">
+          <div class="cards">
+            <div class="card card-2">
+              <div class="it-1 inter-semi-bold-black-16px">IT/과학 카테고리 언급량 1위</div>
+              <div class="ai inter-semi-bold-black-40px">AI</div>
+              <div class="x20-month-over-month small-text">+20% month over month</div>
+            </div>
+            <div class="card card-2">
+              <div class="text-39 inter-semi-bold-black-16px">스포츠</div>
+              <div class="text-40 inter-semi-bold-black-40px">류현진</div>
+              <div class="x33-month-over-month small-text">+33% month over month</div>
+            </div>
+            <div class="card-1 card-2">
+              <div class="text-41 inter-semi-bold-black-16px">오늘 날씨</div>
+              <div class="text-42 inter-semi-bold-black-40px">산책하기 좋아요</div>
+              <p class="text-43 small-text">어제보다 최고 기온 2도 상승</p>
+            </div>
+          </div>
+          <!-- 라인 차트 -->
+          <div class="flex-row-1">
+            <div class="overlap-group2">
+            <figure class="highcharts-figure">
+              <div class="line-cart" id="line-cart">
+                <div id="container" style="width: 100%;"></div>
+                <p class="it-1-1 inter-semi-bold-black-16px">IT/과학 1위 키워드 기간 별 언급량 추이</p>
+                
+                  
+                  
+              </div>
+            </figure>
+            </div>
+            <!-- 관련 기사 리스트 -->
+            <div class="list list-3">
+              <div class="ai-1 inter-semi-bold-black-16px">[AI]와 관련된 기사 목록</div>
+              <div class="people">
+                <div class="conversation">
+                  <div class="avatar"><img class="rectangle-1" src="img/rectangle-1.png" alt="Rectangle 1" /></div>
+                  <div class="text-3">
+                    <p class="ai-ai small-text">실생활에 파고드는 AI…애플은 아이패드, 메타는 광고에 ‘AI 추가’</p>
+                    <div class="text-27 inter-normal-tundora-16px">헤럴드 경제</div>
+                  </div>
+                </div>
+                <div class="conversation">
+                  <div class="avatar"><img class="rectangle-1" src="img/rectangle-1-1@2x.png" alt="Rectangle 1" /></div>
+                  <div class="text-3">
+                    <p class="ai-io-t small-text">초고층·지하 건축물, AI·IoT로 재난관리…서울시, 학술용역</p>
+                    <div class="text-4 inter-normal-tundora-16px">뉴시스</div>
+                  </div>
+                </div>
+                <div class="conversation">
+                  <div class="avatar"><img class="rectangle-1" src="img/rectangle-1-2@2x.png" alt="Rectangle 1" /></div>
+                  <div class="text-3">
+                    <p class="lg-aisw lg-1 small-text">LG전자, 임원 대상 ‘AI·SW 역량’ 강화 나선다</p>
+                    <div class="text-4 inter-normal-tundora-16px">이데일리</div>
+                  </div>
+                </div>
+                <div class="conversation">
+                  <div class="avatar"><img class="rectangle-1" src="img/rectangle-1-3@2x.png" alt="Rectangle 1" /></div>
+                  <div class="text-3">
+                    <p class="m4-ai small-text">
+                      &#34;맥북보다 똑똑한 아이패드&#34;…애플, 괴물칩 M4로 &#39;AI 승부수&#39;
+                    </p>
+                    <div class="text-4 inter-normal-tundora-16px">한국경제</div>
+                  </div>
+                </div>
+                <div class="conversation">
+                  <div class="avatar"><img class="rectangle-1" src="img/rectangle-1-4@2x.png" alt="Rectangle 1" /></div>
+                  <div class="text-3">
+                    <p class="skt-1-aib2-b small-text">SKT 1분기 영업이익 정체…“AI·B2B 사업은 성장세”</p>
+                    <div class="text-4 inter-normal-tundora-16px">문화일보</div>
+                  </div>
+                </div>
+              </div>
+              <div class="x01-secondary-button">
+                <div class="text-32 valign-text-middle small-text">관련 기사 더보기 &gt;</div>
+              </div>
+            </div>
+          </div>
+          <!-- 키워드 순위 리스트 -->
+          <div class="flex-row-2">
+            <div class="list-1 list-3">
+              <div class="title inter-semi-bold-black-16px">스포츠 카테고리 키워드 순위</div>
+              <p class="text-26 inter-normal-tundora-16px">조회 기간 : 2024-04-05 ~ 2024-05-05</p>
+              <div id="newslist" class="newslist">
+                
+              </div>
+             
+            </div>
+            <!-- 워드클라우드 -->
+            
+            <div class="bar-chart">
+              <p class="text-18 inter-semi-bold-black-16px">기간 내 스포츠 카테고리 키워드 순위</p>
+              
+              <figure class="highcharts-figure">
+                <div id="container" style="width: 100%;"></div>
+                 
+             </figure>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script>
+    var datav = new FormData();
+    var top;
+    var keywords;
+    $(function() {
+      $('#sendjango').click(function() {
+          let formData = new FormData();
+          formData.append('select', $('#exampleSelect').val());
+          formData.append('start', $('#datePicker').val());
+          formData.append('end', $('#datePicker2').val());
+  
+          datav.append('select', $('#exampleSelect').val());
+          datav.append('start', $('#datePicker').val());
+          datav.append('end', $('#datePicker2').val());
+          
+          $.ajax({
+              url: 'http://192.168.0.131:9000/hhjsemi/projectList',
+              type: 'POST',
+              data: formData,
+              processData: false,
+              contentType: false,
+              success: function(response) {
+                  console.log(response);
+                  top = JSON.parse(response.top); // JSON 파싱
+                  keywords = JSON.parse(response.keywords); // JSON 파싱
+                  var seriesData = []; // 시리즈 데이터를 저장할 배열 생성
+                  var categories = []; // X 축 값을 저장할 배열 생성
+                  renderNewsList(keywords);
+                  // response 데이터를 가공하여 시리즈 데이터에 추가
+                  for (var i = 0; i < 10; i++) {
+                      var item = keywords[i];
+                      // 각 데이터를 시리즈 형태로 변환하여 추가
+                      seriesData.push({
+                          name: item.단어,
+                          y: item.빈도수
+                      });
+                      // X 축 값을 배열에 추가
+                      categories.push(item.단어);
+                  }
+                  
+                  // Highcharts 차트 생성
+                  Highcharts.chart('line-cart', {
+                      accessibility: {
+                          enabled: false // 접근성 기능 비활성화
+                      },
+                      chart: {
+                          type: 'line' // 막대그래프 유형 선택
+                      },
+                      title: {
+                          text: '단어 빈도수'
+                      },
+                      xAxis: { // x축 변경
+                          categories: categories, // X 축 값으로 배열 사용
+                          title: {
+                              text: '단어' // X 축 레이블
+                          }
+                      },
+                      yAxis: { // y축 변경
+                          title: {
+                              text: '빈도수' // Y 축 레이블
+                          }
+                      },
+                      series: [{
+                        name: '빈도수', // 시리즈 이름
+                        data: seriesData, // 변환한 데이터를 시리즈로 설정
+                        events: {
+                          click: function(event) {
+                              // 클릭한 막대의 데이터 가져오기
+                            var clickedBarIndex = event.point.index; // 클릭한 막대의 인덱스
+                            var clickedBarName = this.options.data[clickedBarIndex].name; // 클릭한 막대의 이름
+                            var clickedBarValue = this.options.data[clickedBarIndex].y; // 클릭한 막대의 값
+
+                            console.log("Clicked bar name:", clickedBarName);
+                            console.log("Clicked bar value:", clickedBarValue);
+                          }
+                        }    
+                    }]
+                  });
+                  Highcharts.chart('container', {
+                  series: [{
+                    type: 'wordcloud',
+                    data: keywords.map(function (item) {
+                      return { name: item.단어, weight: item.빈도수 };
+                    }),
+                    name: 'Occurrences'
+                  }],
+                  title: {
+                    text: ''
+                  }
+                });
+                function renderNewsList(data) {
+                  console.log(data);
+                  // newslist div 선택
+                  var newsListDiv = document.getElementById('newslist');
+            
+                  // 헤더 생성
+                  var header = '<div class="text-container inter-semi-bold-gray-16px">' +
+                              '<div class="text-21">순위</div>' +
+                              '<div class="text-19">키워드</div>' +
+                              '<div class="text-20">언급량</div>' +
+                              '</div>';
+                  
+                  // 데이터 출력
+                  var listHTML = header; // 헤더 추가
+                  console.log(data.length);
+                  for (var i = 0; i < data.length; i++) {
+                    // 데이터 하나마다 HTML로 변환
+                    var item = data[i];
+                    var listItem = '<div class="frame-2610">' +
+                                  '<div class="flex-row-3">' +
+                                  '<div class="number-4 inter-normal-black-16px">' + (i + 1) + '</div>' +
+                                  '<div class="text-22 small-text">' + item.단어 + '</div>' + // 수정된 부분: item.keyword -> item.단어
+                                  '<div class="number-1 inter-normal-black-16px">' + item.빈도수 + '</div>' + // 수정된 부분: item.mention -> item.빈도수
+                                  '</div>' +
+                                  '</div>';
+                    // 리스트에 추가
+                    listHTML += listItem;
+                  }
+            
+                  // HTML을 newslist div에 삽입
+                  newsListDiv.innerHTML = listHTML;
+                }
+
+              }
+          });
+      });
+  });
+  </script>
+
+  
+  
+
+</html>

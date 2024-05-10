@@ -1,0 +1,133 @@
+:root { 
+  --black: #000000;
+  --black-haze: #f7f7f7;
+  --bon-jour: #e0e0e0;
+  --gray: #828282;
+  --tundora: #444444;
+  --white: #ffffff;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-s: 13px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 40px;
+  --font-size-xxxl: 64px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+}
+.title {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1.28px;
+}
+
+.subheading {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.body-text {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.small-text {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.inter-normal-gray-13px {
+  color: var(--gray);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-normal-tundora-16px {
+  color: var(--tundora);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-black-40px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-semi-bold-gray-16px {
+  color: var(--gray);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+.date-input {
+  position: relative;
+}
+
+.date-input input[type="date"] {
+  padding-right: 30px;
+}
+
+.date-input::after {
+  content: '\f073';
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  pointer-events: none;
+}
+.date-input2 {
+  position: relative;
+}
+
+.date-input2 input[type="date"] {
+  padding-right: 30px;
+}
+
+.date-input2::after {
+  content: '\f073';
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  pointer-events: none;
+}
+/* 사용자 정의 호버 스타일 */
+.btn-black:hover {
+  background-color: #555 !important; /* 호버 시 색상 변경 */
+  color: #fff !important; /* 호버 시 글자 색상 변경 */
+}
