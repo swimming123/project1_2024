@@ -1,0 +1,10 @@
+create table myshop(
+    num number constraint myshop_num_pk primary key,
+    pname varchar2(100),
+    contents varchar2(400),
+    filename varchar2(100),
+    price number(10),
+    mydate date
+);
+create sequence myshop_seq
+increment by 1 start with 1;

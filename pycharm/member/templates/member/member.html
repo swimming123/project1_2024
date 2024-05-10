@@ -1,0 +1,85 @@
+{% include "header.html" %}
+<div id="content" class="container mt-5">
+  <h2 class="text-center"> Member Demo </h2>
+<div class="row">
+<form method="post" action="meminsert">
+{% csrf_token %}
+<table class="table table-striped">
+  <thead>
+  <tr><th colspan="2">회원 가입 예제</th></tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>ID</td>
+    <td>
+      <input type="text" name="id" id="id" placeholder="ID" >
+      <input type="button" value="중복확인" id="chkBtn">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <span id="target"></span>
+    </td>
+  </tr>
+  <tr>
+    <td>PWD</td>
+    <td>
+      <input type="password" name="pwd" id="pwd">
+    </td>
+  </tr>
+  <tr>
+    <td>NAME</td>
+    <td>
+      <input type="text" name="name" id="name" placeholder="이름">
+    </td>
+  </tr>
+  <tr>
+    <td>TEL</td>
+    <td>
+      <input type="text" name="tel" id="tel" placeholder="Tel">
+    </td>
+  </tr>
+ <tr>
+    <td>EMAIL</td>
+    <td>
+     <input type="email" name="email" id="email" placeholder="Email">
+    </td>
+  </tr>
+  <tr>
+    <td>ADDR</td>
+    <td>
+     <input type="text" name="addr" id="addr" placeholder="Addr">
+    </td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr><th colspan="2"> <input type="submit" value="가입하기"></th></tr>
+  </tfoot>
+</table>
+</form>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('#chkBtn').click(function(){
+            alert('Test =>'+$('#id').val());
+            // id가 #target tag에 문자열로 홀롤롤로란 값을 저장해라.
+            //$('#target').html('홀롤롤로');
+            $.ajax({
+                url:'memIdchk?id='+$('#id').val(),
+                success:function(data){
+                console.log('data=>'+data)
+                    if(data === '0'){
+                        $('#target').html('사용 가능한 아이디 입니다.');
+                        $('#target').css('color', 'blue');
+                    }else{
+                        $('#target').html('이미 사용중인 아이디 입니다.');
+                        $('#target').css('color', 'red');
+                    }
+                }
+            });
+        });
+    });
+</script>
+{% include "footer.html" %}
